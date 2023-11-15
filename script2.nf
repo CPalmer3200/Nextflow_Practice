@@ -52,13 +52,13 @@ echo ${read1.simpleName} | cut -d'_' -f1 | xargs -i spades.py --careful -1 $read
 
 workflow {
 
-/*// Define a channel with the linkfile input
+// Define a channel with the linkfile input
 link_ch=Channel.fromPath(params.linkfile)
 
 // Call the download process with the links channel
 download(link_ch)
 // View the location of the output generated under outputfile
-download.out.outputfile.view()*/
+download.out.outputfile.view()
 
 read1_ch=Channel.fromPath(params.read1)
 read2_ch=Channel.fromPath(params.read2)
